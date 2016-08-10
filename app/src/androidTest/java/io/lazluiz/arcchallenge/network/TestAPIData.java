@@ -57,7 +57,7 @@ public class TestAPIData extends InstrumentationTestCase {
         });
 
         // Timeout
-        signal.await(999, TimeUnit.SECONDS);
+        signal.await(30, TimeUnit.SECONDS);
     }
 
     private void makeResquest(String url, JSONObject data, final Type classType, final CountDownLatch signal) {
@@ -102,6 +102,28 @@ public class TestAPIData extends InstrumentationTestCase {
                 Log.e(LOG, "Error: " + error.getMessage());
             }
         });
+    }
+
+    // Now we have a much more simpler API requester!
+    public void testNewAPIData() throws Throwable {
+        final CountDownLatch signal = new CountDownLatch(1);
+        final APIData apiData = new APIData();
+
+        runTestOnUiThread(new Runnable() {
+            @Override
+            public void run() {
+                apiData.callForRoutes("lauro linhares", new APIData.CallbackForRoutes() {
+                    @Override
+                    public void result(Route[] routes) {
+                        assertTrue("There should be some data!", routes != null && routes.length > 0 );
+                        signal.countDown();
+                    }
+                });
+            }
+        });
+
+        // Timeout
+        signal.await(30, TimeUnit.SECONDS);
     }
 
 }

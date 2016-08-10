@@ -13,16 +13,23 @@
         android:theme="@style/AppTheme">
 
         <!-- Main Activity -->
-        <activity android:name=".MainActivity">
+        <activity android:name=".views.MainActivity">
+
+        </activity>
+
+        <activity android:name=".views.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <!-- TODO Details Activity -->
 
+
         <!-- TODO Bonus: Map Activity -->
+
 
     </application>
 

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">ArcChallenge</string>
+
+    <!-- Toolbar -->
+    <string name="action_search">Search</string>
+    <string name="action_search_hint">Search by stop name</string>
 </resources>

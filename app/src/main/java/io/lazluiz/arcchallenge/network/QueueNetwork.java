@@ -60,6 +60,7 @@ public class QueueNetwork {
         }
     }
 
+    // The API only uses POST requests, so we are fine with just this one.
     public void doPost(String url, Object tag, JSONObject data,
                        NetworkRequestCallback<JSONObject> callback) {
         JsonObjectRequest jsonObjectRequest = buildJSONRequest(
