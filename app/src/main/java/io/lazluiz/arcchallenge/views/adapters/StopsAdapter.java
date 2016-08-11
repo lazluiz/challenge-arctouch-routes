@@ -23,13 +23,6 @@ public class StopsAdapter extends ArrayAdapter<Stop> {
         super(context, resource, stops);
     }
 
-    // Custom method to refresh the list with new routes
-    public void repopulateList(List<Stop> stops){
-        clear();
-        addAll(stops);
-        notifyDataSetChanged();
-    }
-
     // A view holder for better performance when retrieving new views
     private static class ViewHolder {
         TextView tvSequence;
@@ -65,7 +58,6 @@ public class StopsAdapter extends ArrayAdapter<Stop> {
 
     private String formatSequence(int sequence){
         String seqStr = String.valueOf(sequence);
-        char lastNum = seqStr.charAt(seqStr.length() - 1);
 
         return seqStr.equals("1") ? seqStr.concat("st")
                 : seqStr.equals("2") ? seqStr.concat("nd")

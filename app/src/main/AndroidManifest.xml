@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <!-- Main Activity -->
-        <activity android:name=".views.MainActivity"></activity>
-
         <!-- List Activity -->
         <activity android:name=".views.ListActivity">
             <intent-filter>

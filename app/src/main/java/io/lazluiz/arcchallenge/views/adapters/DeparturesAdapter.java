@@ -1,16 +1,13 @@
 package io.lazluiz.arcchallenge.views.adapters;
 
 import android.content.Context;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import java.util.Arrays;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 import io.lazluiz.arcchallenge.R;
@@ -74,7 +71,7 @@ public class DeparturesAdapter extends BaseExpandableListAdapter {
 
                 if (convertView == null) {
             LayoutInflater inf = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = inf.inflate(R.layout.item_list_departures_group, null);
+            convertView = inf.inflate(R.layout.item_list_departures_group, parent, false);
         }
         DepartureGroup departureGroup = (DepartureGroup) getGroup(groupPosition);
 
@@ -90,7 +87,7 @@ public class DeparturesAdapter extends BaseExpandableListAdapter {
 
         if (convertView == null) {
             LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-            convertView = layoutInflater.inflate(R.layout.item_list_departures, null);
+            convertView = layoutInflater.inflate(R.layout.item_list_departures, parent, false);
         }
 
         Departure departure = (Departure) getChild(groupPosition, childPosition);
