@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="?attr/colorPrimary"
-    android:elevation="4dp">
+    android:contentInsetEnd="0dp"
+    android:contentInsetLeft="0dp"
+    android:contentInsetRight="0dp"
+    android:contentInsetStart="0dp"
+    android:elevation="4dp"
+    app:contentInsetEnd="0dp"
+    app:contentInsetLeft="0dp"
+    app:contentInsetRight="0dp"
+    app:contentInsetStart="0dp">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
@@ -14,10 +23,10 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:text="Routes"
             android:fontFamily="sans-serif-light"
             android:gravity="center"
-            android:textSize="32dp"/>
+            android:text="Routes"
+            android:textSize="28sp" />
 
         <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
@@ -37,12 +46,12 @@
                 android:id="@+id/btn_search"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+                android:layout_marginLeft="6dp"
+                android:layout_marginRight="6dp"
                 android:background="?android:attr/selectableItemBackground"
                 android:drawableEnd="@android:drawable/ic_menu_search"
                 android:drawableRight="@android:drawable/ic_menu_search"
-                android:text="@string/action_search"
-                android:layout_marginLeft="6dp"
-                android:layout_marginRight="6dp"/>
+                android:text="@string/action_search" />
         </LinearLayout>
 
     </LinearLayout>

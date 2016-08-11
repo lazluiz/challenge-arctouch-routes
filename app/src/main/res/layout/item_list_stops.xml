@@ -7,19 +7,22 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/item_text_short_name"
+        android:id="@+id/item_text_sequence"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:fontFamily="sans-serif-condensed"
         android:gravity="center"
+        android:text="000"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
     <TextView
-        android:id="@+id/item_text_long_name"
+        android:id="@+id/item_text_stop_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="8"
         android:fontFamily="sans-serif-light"
+        android:text="Route Name"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
 </LinearLayout>

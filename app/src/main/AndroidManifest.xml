@@ -13,19 +13,24 @@
         android:theme="@style/AppTheme">
 
         <!-- Main Activity -->
-        <activity android:name=".views.MainActivity">
+        <activity android:name=".views.MainActivity"></activity>
 
-        </activity>
-
+        <!-- List Activity -->
         <activity android:name=".views.ListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- TODO Details Activity -->
+        <!-- Details Activity -->
+        <activity
+            android:name=".views.DetailsActivity"
+            android:parentActivityName=".views.ListActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".views.ListActivity"/>
+        </activity>
 
 
         <!-- TODO Bonus: Map Activity -->

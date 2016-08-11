@@ -2,12 +2,14 @@ package io.lazluiz.arcchallenge.models;
 
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by luiz on 08/08/16.
  * E-mail: lf.lazzarin@gmail.com
  * GitHub: github.com/luizfelippe
  */
-public class Route {
+public class Route implements Serializable {
 
     @SerializedName("id")
     private int Id;

@@ -14,9 +14,9 @@ public class Stop {
     @SerializedName("name")
     private String Name;
     @SerializedName("sequence")
-    private String Sequence;
+    private int Sequence;
     @SerializedName("route_id")
-    private String RouteId;
+    private int RouteId;
 
     public int getId() {
         return Id;
@@ -34,19 +34,19 @@ public class Stop {
         Name = name;
     }
 
-    public String getSequence() {
+    public int getSequence() {
         return Sequence;
     }
 
-    public void setSequence(String sequence) {
+    public void setSequence(int sequence) {
         Sequence = sequence;
     }
 
-    public String getRouteId() {
+    public int getRouteId() {
         return RouteId;
     }
 
-    public void setRouteId(String routeId) {
+    public void setRouteId(int routeId) {
         RouteId = routeId;
     }
 }

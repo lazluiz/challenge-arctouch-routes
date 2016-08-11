@@ -4,4 +4,8 @@
     <!-- Toolbar -->
     <string name="action_search">Search</string>
     <string name="action_search_hint">Search by stop name</string>
+
+    <!-- Details Activity -->
+    <string name="details_departures_title">Departures</string>
+    <string name="details_stops_title">Stops</string>
 </resources>
