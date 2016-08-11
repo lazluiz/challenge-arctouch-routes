@@ -5,7 +5,10 @@
 
     <TextView
         android:id="@+id/item_text_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:padding="3dp"/>
 
 </FrameLayout>

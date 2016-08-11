@@ -1,12 +1,16 @@
 package io.lazluiz.arcchallenge.views.adapters;
 
 import android.content.Context;
+import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
+import java.util.Arrays;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import io.lazluiz.arcchallenge.R;
@@ -24,6 +28,8 @@ public class DeparturesAdapter extends BaseExpandableListAdapter {
     private List<DepartureGroup> mDeparturesGroups;
 
     public DeparturesAdapter(Context c, List<DepartureGroup> departureGroups) {
+        Collections.reverse(departureGroups);
+
         mContext = c;
         mDeparturesGroups = departureGroups;
     }
